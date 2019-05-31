@@ -1,6 +1,8 @@
 # ToDo List App Overview
 This app allows users to add tasks using react/redux and saves the data to backend mongodb. There are two endpoints, one for front end and another for backend api. The todo app is built in a node:8 docker image and pushed to kubernetes cluster cloud. An automation script was created to push container to the sore and provision it to the cluster.
 
+The app project contains automated testing and documentation in /doc folder. The front end uses responsive bootstrap design.
+
 <img src="https://raw.githubusercontent.com/monuchacko/todolist/master/assets/images/todolist.png" alt="ToDo List" />
 
 ## How to run
@@ -19,6 +21,8 @@ All components have their own test scripts. They can be executed using the comma
 > npm run test
 
 ## Documentation
+
+All source codes are commented to enable document generation. Documentation for the objects can be found in the /docs folder in this project. Following command can be executed to generate fresh set of documents.
 
 > npm run start-docs
 

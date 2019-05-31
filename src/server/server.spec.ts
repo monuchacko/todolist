@@ -1,23 +1,31 @@
-import {ServerFile, ITask} from './server';
+import { ServerFile, ITask } from './server';
 
-process.env.PORT = "5000";
-let srvr = new ServerFile();
+describe('MongoDB data interaction test', () => {
 
-/**
- * This object is used to test db operations
- */
-let task: ITask = {
-    id: 125,
-    name: "Task 1",
-    description: "Description for Task 1"
-};
+    it("Saves data to mongodb does not crash", () => {
 
-// Insert to db
-srvr.addNewTask(task);
+        // Make sure it doesn't crash
+        process.env.PORT = "5000";
+        let srvr = new ServerFile();
 
-// Update the task item
-task.name = "Task 1 Updated";
+        /**
+         * This object is used to test db operations
+         */
+        let task: ITask = {
+            id: 125,
+            name: "Task 1",
+            description: "Description for Task 1"
+        };
 
-// Save it to db
-srvr.updateTask(task);
-// srvr.listen();
+        // Insert to db
+        srvr.addNewTask(task);
+
+        // Update the task item
+        task.name = "Task 1 Updated";
+
+        // Save it to db
+        srvr.updateTask(task);
+        // srvr.listen();
+
+    });
+});
