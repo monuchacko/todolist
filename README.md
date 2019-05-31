@@ -12,12 +12,15 @@ To run the app execute the command below:
 
 > npm start
 
-
 ## Tesing
 
+All components have their own test scripts. They can be executed using the command below:
+
+> npm run test
 
 ## Documentation
 
+> npm run start-docs
 
 ## Deploy docker image to Kubernetes cloud cluster
 

@@ -4,6 +4,9 @@ import ListSummary from '../components/ListSummary';
 import AddTodo from '../containers/AddTodo';
 import Todos from '../containers/Todos';
 
+/**
+ * App React Component sets up various components of the page
+ */
 class App extends React.Component {
   render() {
     return (

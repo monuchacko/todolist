@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+/**
+ * TopNav React Component return top navigation elements 
+ */
 class TopNav extends React.Component {
     render() {
         return (

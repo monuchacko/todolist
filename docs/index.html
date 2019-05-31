@@ -66,7 +66,7 @@
 			<div class="tsd-panel tsd-typography">
 				<h1 id="todo-list-app-overview">ToDo List App Overview</h1>
 				<p>This app allows users to add tasks using react/redux and saves the data to backend mongodb. There are two endpoints, one for front end and another for backend api. The todo app is built in a node:8 docker image and pushed to kubernetes cluster cloud. An automation script was created to push container to the sore and provision it to the cluster.</p>
-				<img href="https://raw.githubusercontent.com/monuchacko/todolist/master/assets/images/todolist.png" alt="todo" />
+				<img src="https://raw.githubusercontent.com/monuchacko/todolist/master/assets/images/todolist.png" alt="ToDo List" />
 				<h2 id="how-to-run">How to run</h2>
 				<p>Clone the image from the github repository and perform the following task:</p>
 				<blockquote>
@@ -77,7 +77,14 @@
 					<p>npm start</p>
 				</blockquote>
 				<h2 id="tesing">Tesing</h2>
+				<p>All components have their own test scripts. They can be executed using the command below:</p>
+				<blockquote>
+					<p>npm run test</p>
+				</blockquote>
 				<h2 id="documentation">Documentation</h2>
+				<blockquote>
+					<p>npm run start-docs</p>
+				</blockquote>
 				<h2 id="deploy-docker-image-to-kubernetes-cloud-cluster">Deploy docker image to Kubernetes cloud cluster</h2>
 				<p>The deployment process is automated. To deploy run the following command in a powershell terminal. This script will create a docker image from the base node:8 image and will push it to the cloud container registery and the cluster.</p>
 				<blockquote>

@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+/**
+ * ListSummary React Component renders summary of todo 
+ */
 class ListSummary extends React.Component {
   render() {
     return (

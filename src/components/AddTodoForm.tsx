@@ -1,15 +1,25 @@
 import * as React from 'react';
 import { FormEvent } from 'react';
 
+/**
+ * Props for form
+ */
 interface Props {
   handleSubmit: (id: string, name: string, description: string) => void
 }
+
+/**
+ * State
+ */
 interface State {
   id: string,
   name: string,
   description: string
 };
 
+/**
+ * AddTodoForm React Component renders data entry form for tasks 
+ */
 export default class AddTodoForm extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -19,15 +29,27 @@ export default class AddTodoForm extends React.Component<Props, State> {
     this._handleSubmit = this._handleSubmit.bind(this);
   }
 
+  /**
+   * Update name property
+   * @param name string updates name state
+   */
   _updateName(name: string) {
     this.setState({ name })
   }
 
+  /**
+ * Update description property
+ * @param description string updates description state
+ */
   _updateDescription(description: string) {
     this.setState({ description })
   }
 
-  _handleSubmit(e: FormEvent<any>) {   
+  /**
+   * Submit handler
+   * @param e FormEvent
+   */
+  _handleSubmit(e: FormEvent<any>) {
     console.log("btn clicked");
     e.preventDefault()
     if (!this.state.name.trim()) {
@@ -40,6 +62,9 @@ export default class AddTodoForm extends React.Component<Props, State> {
     this.setState({ description: '' });
   }
 
+  /**
+   * Render component
+   */
   render() {
     const { name } = this.state;
     const { description } = this.state;
