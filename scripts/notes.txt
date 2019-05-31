@@ -1,0 +1,21 @@
+# ToDo List
+
+docker build -t app/todolist01 .
+docker run -p 49160:3000 -d app/todolist01
+docker ps
+docker exec -it daa073921e20 bash
+docker stop daa073921e20
+docker rmi 27fff0d33c50 --force
+minikube start --vm-driver hyperv --hyperv-virtual-switch "Primary Virtual Switch"
+
+az aks get-credentials -g tf-eastus2-dev-sharepointwebdev-rg -n mc-kube001
+
+# Container Registry
+az acr login -n mckubecontainer001
+az acr show -n mckubecontainer001 --query loginServer --output tsv
+
+mckubecontainer001.azurecr.io
+docker image ls
+
+# Docker deploy
+https://markheath.net/post/build-container-images-with-acr
