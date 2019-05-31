@@ -3,6 +3,9 @@ import {ServerFile, ITask} from './server';
 process.env.PORT = "5000";
 let srvr = new ServerFile();
 
+/**
+ * This object is used to test db operations
+ */
 let task: ITask = {
     id: 125,
     name: "Task 1",

@@ -1,5 +1,6 @@
 import { MongoClient } from 'mongodb';
 
+// Connect to backend
 const url = process.env.MONGODB_URI || `mongodb://localhost:27017/todolist`;
 let db:any = null;
 

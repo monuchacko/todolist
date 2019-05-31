@@ -1,45 +1,46 @@
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-// import path from 'path';
-import { connectDB } from './connect-db';
+/**
+ * This is not in use. Used for reference
+ */
 
-const app = express();
-const port = 8888; // default port to listen
+// import express from 'express';
+// import cors from 'cors';
+// import bodyParser from 'body-parser';
+// // import path from 'path';
+// import { connectDB } from './connect-db';
 
-// // Configure Express to use EJS
-// app.set( "views", path.join( __dirname, "views" ) );
-// app.set( "view engine", "ejs" );
+// const app = express();
+// const port = 8888; // default port to listen
 
-app.use(
-    cors(),
-    bodyParser.urlencoded({extended:true}),
-    bodyParser.json()
-)
+// // // Configure Express to use EJS
+// // app.set( "views", path.join( __dirname, "views" ) );
+// // app.set( "view engine", "ejs" );
 
-export const addNewtask = async (task: any) => {
-    let db = await connectDB();
-    let collection = db.collection(`task`);
-    await collection.insertOne(task);
-}
+// app.use(
+//     cors(),
+//     bodyParser.urlencoded({extended:true}),
+//     bodyParser.json()
+// )
 
-app.post('task/new', async(req, res)=>{
-    let task = req.body.task;
-    await addNewtask(task);
-    res.send(200).send();
-});
+// export const addNewtask = async (task: any) => {
+//     let db = await connectDB();
+//     let collection = db.collection(`task`);
+//     await collection.insertOne(task);
+// }
 
-// // define a route handler for the default home page
-// app.get( "/", ( req, res ) => {
-//     // render the index template
-//     res.render( "index" );
-// } );
+// app.post('task/new', async(req, res)=>{
+//     let task = req.body.task;
+//     await addNewtask(task);
+//     res.send(200).send();
+// });
 
-// start the express server
-app.listen( port, () => {
-    // tslint:disable-next-line:no-console
-    console.log( `server started at http://localhost:${ port }` );
-} );
+// // // define a route handler for the default home page
+// // app.get( "/", ( req, res ) => {
+// //     // render the index template
+// //     res.render( "index" );
+// // } );
 
-
-
+// // // start the express server
+// // app.listen( port, () => {
+// //     // tslint:disable-next-line:no-console
+// //     console.log( `server started at http://localhost:${ port }` );
+// // } );

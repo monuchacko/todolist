@@ -8,7 +8,7 @@ import './index.css'
 import './bootstrap.min.css';
 
 /**
- * 
+ * This is the entry point of the react component. It renders the app component to the root node
  */
 ReactDOM.render(
   <Provider store={store}>

@@ -31,7 +31,8 @@
     "dev": "react-scripts-ts start",
     "test-db": "ts-node -r esm src/server/connect-db.ts",
     "test-server": "ts-node -r esm src/server/server.ts",
-    "test-server-script": "npx ts-node-dev -r esm src/server/server.spec.ts"
+    "test-server-script": "npx ts-node-dev -r esm src/server/server.spec.ts",
+    "start-docs": "typedoc --out docs src/"
   },
   "devDependencies": {
     "@types/cors": "^2.8.5",
