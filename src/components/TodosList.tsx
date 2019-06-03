@@ -19,7 +19,9 @@ export default class AddTodoForm extends React.Component<Props, State> {
   }
 
   render() {
-    const { todos, onTodoClicked } = this.props
+    
+    const { todos, onTodoClicked } = this.props;
+
     return (
       <div>
         <table className="table table-hover">
@@ -33,10 +35,15 @@ export default class AddTodoForm extends React.Component<Props, State> {
           <tbody>
             {
               todos.map(todo => (
-                <tr className="table-active" key={todo.id} onClick={() => onTodoClicked(todo.id)} style={{ textDecoration: `${todo.done ? 'line-through' : ''}`, cursor: 'pointer' }}>
+                <tr 
+                  className="table-active" 
+                  key={todo.id} 
+                  onClick={() => onTodoClicked(todo.id)} 
+                  style={{ textDecoration: `${todo.done ? 'line-through' : ''}`, cursor: 'pointer' }}
+                >
                   <th scope="row">{todo.name}</th>
                   <td>{todo.description}</td>
-                  <td></td>
+                  <td>{todo.duedate.toDateString()}</td>
                 </tr>)
               )
             }

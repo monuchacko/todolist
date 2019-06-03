@@ -5,6 +5,7 @@ The app project contains automated testing and documentation in /doc folder. The
 
 <img src="https://raw.githubusercontent.com/monuchacko/todolist/master/assets/images/todolist.png" alt="ToDo List" />
 
+
 ## How to run
 Clone the image from the github repository and perform the following task:
 
@@ -13,6 +14,10 @@ Clone the image from the github repository and perform the following task:
 To run the app execute the command below:
 
 > npm start
+
+To build the app execute the following command below:
+
+> npm run build
 
 ## Tesing
 

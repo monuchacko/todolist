@@ -1,6 +1,6 @@
 import * as React from 'react';
 import TopNav from '../components/TopNav';
-import ListSummary from '../components/ListSummary';
+import ListSummaryItems from '../containers/ListSummaryItems';
 import AddTodo from '../containers/AddTodo';
 import Todos from '../containers/Todos';
 
@@ -18,7 +18,7 @@ class App extends React.Component {
         </div>
         <div className="row">
           <div className="col-md-3">
-            <ListSummary />
+            <ListSummaryItems />
           </div>
           <div className="col-md-9">
             <AddTodo />
