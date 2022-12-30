@@ -53,7 +53,7 @@
     "concurrently": "^4.1.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.2",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "mongodb": "^3.2.6",
     "raf": "^3.4.1",
     "redux-logger": "^3.0.6",
